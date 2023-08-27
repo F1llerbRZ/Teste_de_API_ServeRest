@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "259d72f0-67c6-43b6-bd2c-af1c325b5aa1",
+		"name": "Teste ServeRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23587836",
+		"_collection_link": "https://red-firefly-500218.postman.co/workspace/Estudos-EBAC~e3b1a2ce-1de1-42ff-b5ac-210348b4fbb0/collection/23587836-259d72f0-67c6-43b6-bd2c-af1c325b5aa1?action=share&source=collection_link&creator=23587836"
+	},
+	"item": [
+		{
+			"name": "Listar Usuários (cenário positivo)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/usuarios/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Usuário (cenário negativo)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Thiago Aluno\",\r\n  \"email\": \"thiagoaluno@qa.com.br\",\r\n  \"password\": \"teste\",\r\n  \"administrador\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Usuário (cenário positivo)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/usuarios/0uxuPY0cbmQhpEz1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"0uxuPY0cbmQhpEz1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Usuário (cenário negativo/positivo)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Thiago\",\r\n  \"email\": \"thiagoaluno@qa.com.br\",\r\n  \"password\": \"teste 1\",\r\n  \"administrador\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuarios/BTyFlTZctnoXzblz",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuarios",
+						"BTyFlTZctnoXzblz"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
